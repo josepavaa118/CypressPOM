@@ -33,14 +33,14 @@ Follow these steps in order to get a working copy of the project
 
 ## Project Structure
 *Below you'll find a brief description of the most relevant folder structure:*
-    Cypress Folder: Contains all Cypress related files for the overal testing functionality
-        'e2e' Folder: Contains all the .spec files which contains the tests suite and their respective test cases
-        'fixtures' Folder: This folder contains .json files that are required as part of the testing flows. Can be used to store data like usernames, passwords, input values and so on...
-        'selectors' Folder: This folder contains all Web Elements/selector files that should be interacted/used as part of the testing flow, along with their respective methods for different user interactions.
-        'support' Folder: The only relevant file here is 'commands' which includes the custom Cypress commands created for this project's usage
-
-## Disclaimer
-*As I move forward with this project this ReadMe file may change, along with any description or steps given previously*
+1. Cypress Folder: Contains all Cypress related files for the overal testing functionality
+2. 'e2e' Folder: Contains all the .spec files which contains the tests suite and their respective test cases
+3. 'fixtures' Folder: This folder contains .json files that are required as part of the testing flows. Can be used to store data like usernames, passwords, input values and so on...
+4. 'selectors' Folder: This folder contains all Web Elements/selector files that should be interacted/used as part of the testing flow, along with their respective methods for different user interactions.
+5. 'support' Folder: The only relevant file here is 'commands' which includes the custom Cypress commands created for this project's usage
 
 ## Upcoming updates
 *I plan to keep improving this project, and as such I will work on adding additional tests for the time being.*
+
+## Disclaimer
+*As I move forward with this project this ReadMe file may change, along with any description or steps given previously*

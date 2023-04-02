@@ -1,45 +1,46 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# **Cypress** With Easy POM -Rev April 1st 2023
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
-
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
-
----
-
-## Edit a file
-
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+## Background
+Some time ago I have created a test suite using Page Object Model for one of the projects I've worked. However, it was implemented using classes much selenium-style like, and our Lead was wondering if there was a "Cypress Way" to do it without implement such abstraction methods. After doing some research on my own and some back and forth, I reached the conclusion that there is no "Cypress Way", BUT... still.. there has to be a way to do so without such implementation, and I have found this way of handling things, which allowed me to respect Automated Best Practices, and keep away a class implementation. At the very end you'll find out which approach works best for your needs.
 
 ---
 
-## Create a file
+## General Details
 
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+*The Application under test can be found [here](https://angularjs.realworld.io/). Feel free to roam around and get familiar with it.*
+This project was created using Cypress and Typescript.
 
 ---
 
-## Clone a repository
+## Goals
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+This project was created with the following goals in mind
+1. Keep code simple, clean and readable.
+2. Make tasks like code refactoring easier.
+3. Implement Automation Best Practices.
+4. Keep away some Selenium practices.
+5. Rely on Cypress functionality as much as possible.
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+---
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+## Setup
+
+Follow these steps in order to get a working copy of the project
+1. Clone the project: `git clone https://github.com/josepavaa118/CypressPOM.git`
+2. Open the project folder using VSCode or any IDE of your preference (Using terminal/console works too!).
+3. Run the following command on a terminal window: `npm install` to get all Node Dependencies required
+4. At the moment of creating the first version of the Readme file, you can open Cypress window using the following command: `npx cypress open`, more custom commands with different properties will be added down the road.
+
+## Project Structure
+*Below you'll find a brief description of the most relevant folder structure:*
+    Cypress Folder: Contains all Cypress related files for the overal testing functionality
+        'e2e' Folder: Contains all the .spec files which contains the tests suite and their respective test cases
+        'fixtures' Folder: This folder contains .json files that are required as part of the testing flows. Can be used to store data like usernames, passwords, input values and so on...
+        'selectors' Folder: This folder contains all Web Elements/selector files that should be interacted/used as part of the testing flow, along with their respective methods for different user interactions.
+        'support' Folder: The only relevant file here is 'commands' which includes the custom Cypress commands created for this project's usage
+
+## Disclaimer
+*As I move forward with this project this ReadMe file may change, along with any description or steps given previously*
+
+## Upcoming updates
+*I plan to keep improving this project, and as such I will work on adding additional tests for the time being.*

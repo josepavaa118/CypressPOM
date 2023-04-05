@@ -1,4 +1,4 @@
-describe("Testing API Endpoints Using Cypress", () => {
+describe("API Test Cases for user creation", () => {
    const apiUrl = Cypress.env('apiUrl')
    let userData:any
     before(() => {
@@ -29,9 +29,5 @@ describe("Testing API Endpoints Using Cypress", () => {
             expect(response.status).to.eq(200)
             expect(response.body.user.email).to.contain(userData.user.email)
         })
-        
-  
-      
-        })
-    
+        })   
 })

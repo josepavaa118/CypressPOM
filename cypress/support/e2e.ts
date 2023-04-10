@@ -22,7 +22,8 @@ declare global {
     // eslint-disable-next-line no-unused-vars
     namespace Cypress {
       interface Chainable {
-        openHomePage(): Chainable<Element>;
+        openHomePage(): Chainable<Element>
+        userLogin(): Chainable<Element>;
       }
     }
   }

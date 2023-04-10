@@ -25,5 +25,22 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 Cypress.Commands.add("openHomePage", () => {
   // visits the baseUrl setted up in cypress.json
-  cy.visit("/");
-});
+  cy.visit("/")
+})
+Cypress.Commands.add("userLogin", () => {
+  cy.request({ 
+    method:"POST",
+    url: Cypress.env('apiUrl')+'/users/login',
+    headers:{
+        'Content-Type': 'application/json'
+    },
+    body:{
+        "user":{
+        "email": Cypress.env('APIemail'),
+        "password": Cypress.env('APIpassword')
+    }    
+    }
+}).then((response) => { 
+    window.localStorage.setItem('jwtToken', response.body.user.token)
+  })
+})

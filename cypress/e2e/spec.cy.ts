@@ -8,16 +8,16 @@ describe('template spec', () => {
     cy.fixture("uiTexts").then((data) => {
       uiTexts = data
       return uiTexts
-    });
-  });
+    })
+  })
   beforeEach("Open App", () => {
     // Command to visit home page each time a test starts
     cy.openHomePage()
   });
   
   it('Should display Home Page', () => {
-    appHome.printStuff()
-    appHome.checkIfHomePage(appHome.homePageHeader)
+    //appHome.checkIfHomePage(appHome.homePageHeader)
+    cy.get(appHome.homePageHeader).should('be.visible').should('have.text',uiTexts.homePageHeader)
   })
   
   it('Should redirect to Sign In Page', () => {

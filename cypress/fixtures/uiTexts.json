@@ -1,4 +1,5 @@
 {
     "homePageHeader": "conduit",
-    "signInPageHeader" : "Sign in"
+    "signInPageHeader" : "Sign in",
+    "publishBtn": "Publish Article"
 }

@@ -40,6 +40,19 @@ describe('template spec', () => {
     cy.contains(feed.newArticleLink).click()
     cy.get('.btn').should('be.visible').should('contains.text',uiTexts.publishBtn)
   })
+
+  it ('Should not create a new Article when title is empty', () => {
+    //feed.clickOnNewArticle()
+    cy.contains(feed.newArticleLink).click()
+    cy.get(article.description).type(articleData.description)
+    cy.get(article.body).type(articleData.body)
+    cy.get(article.tags).type(articleData.tags)
+    cy.contains(article.button).click()
+    cy.get(article.titleErrorMsg).should('be.visible').should('contains.text',articleData.errorMsg)
+
+    
+  })
+
   it ('Should create a new Article', () => {
     //feed.clickOnNewArticle()
     cy.contains(feed.newArticleLink).click()
@@ -51,6 +64,11 @@ describe('template spec', () => {
     cy.get('h1.ng-binding').should('be.visible').should('contains.text',articleData.title)
 
     
+  })
+
+  after("delete Article", () => {
+    // Command to visit home page each time a test starts
+    cy.deleteCreatedArticle()
   })
 
 })

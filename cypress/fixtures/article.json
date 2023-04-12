@@ -2,5 +2,7 @@
     "title": "Automated Title",
     "description": "Automated Description",
     "body": "This is the body created using automation testing",
-    "tags": "QA, Automation, Testing"
+    "tags": "QA, Automation, Testing",
+    "slug": "automated-title",
+    "errorMsg": "title can't be blank"
 }

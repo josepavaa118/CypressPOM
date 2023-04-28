@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: "ghkhiq",
   env: {
     apiUrl: 'https://api.realworld.io/api'
 },

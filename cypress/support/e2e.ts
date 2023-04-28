@@ -23,7 +23,8 @@ declare global {
     namespace Cypress {
       interface Chainable {
         openHomePage(): Chainable<Element>
-        userLogin(): Chainable<Element>;
+        userLogin(): Chainable<Element>
+        deleteCreatedArticle(): Chainable<Element>
       }
     }
   }

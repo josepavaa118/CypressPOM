@@ -4,7 +4,8 @@ module.exports = {
     description: ':nth-child(2) > .form-control',
     body: ':nth-child(3) > .form-control',
     tags: ':nth-child(4) > .form-control',
-    button: 'Publish Article'
+    button: 'Publish Article',
+    titleErrorMsg: 'div.ng-scope > .ng-binding'
     //Functions
     
 }

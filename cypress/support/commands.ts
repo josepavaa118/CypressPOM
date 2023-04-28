@@ -43,4 +43,16 @@ Cypress.Commands.add("userLogin", () => {
 }).then((response) => { 
     window.localStorage.setItem('jwtToken', response.body.user.token)
   })
+
+  Cypress.Commands.add("deleteCreatedArticle", () => {
+    //cy.userLogin()
+    cy.request({ 
+      method:"DELETE",
+      url: Cypress.env('apiUrl')+'/articles/'+Cypress.env('ArticleSlug'),
+      headers:{
+        'Authorization': 'Token '+window.localStorage.getItem('jwtToken')
+    },
+     
+    })
+  })
 })

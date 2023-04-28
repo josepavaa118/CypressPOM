@@ -9,7 +9,7 @@ describe("Login Endpoint Testing", () => {
        })
      
        it("Should login as an existing user",() =>{
-         cy.log(userData.user.email)
+         //cy.log(userData.user.email)
          cy.request({
              method:"POST",
              url: apiUrl+'/users/login',
@@ -18,8 +18,8 @@ describe("Login Endpoint Testing", () => {
              },
              body:{
                  "user":{
-                 "email": userData.user.email,
-                 "password": userData.user.password
+                 "email": userData.email,
+                 "password": userData.password
              }    
              }
          }).as('userLogin')
@@ -28,7 +28,7 @@ describe("Login Endpoint Testing", () => {
             var userToken=response.body.user.token
             cy.log(userToken)
              expect(response.status).to.eq(200)
-             expect(response.body.user.email).to.contain(userData.user.email)
+             expect(response.body.user.email).to.contain(userData.email)
          })
          })   
  })

@@ -1,5 +1,9 @@
 {
     "homePageHeader": "conduit",
     "signInPageHeader" : "Sign in",
-    "publishBtn": "Publish Article"
+    "signUpPageHeader" : "Sign up",
+    "publishBtn": "Publish Article",
+    "pwdError": "password can't be blank",
+    "emailError": "email can't be blank",
+    "signInLink": "Need an account?"
 }

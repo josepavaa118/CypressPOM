@@ -9,7 +9,6 @@ describe("API Test Cases for user creation", () => {
       })
     
       it("Should create a new user",() =>{
-        cy.log(userData.user.email)
         cy.request({
             method:"POST",
             url: apiUrl+'/users',
@@ -18,9 +17,9 @@ describe("API Test Cases for user creation", () => {
             },
             body:{
                 "user":{
-                "username":userData.user.username,
-                "email": userData.user.email,
-                "password": userData.user.password
+                "username":userData.username,
+                "email": userData.email,
+                "password": userData.password
             }    
             }
         }).as('createUser')

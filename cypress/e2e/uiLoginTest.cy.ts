@@ -1,7 +1,7 @@
  import * as login from "../selectors/loginPage.sel"
  import * as feed from "../selectors/feedPage.sel"
 
-describe('template spec', () => {
+describe('Login Tests using UI', () => {//The fixture files loaded here are for user credentials and UI Labels
     let userData:any
     let uiTexts: any
     before(() => {
@@ -14,10 +14,10 @@ describe('template spec', () => {
           return uiTexts
         })
       })
-  beforeEach("Open App", () => {
+  beforeEach("Open App", () => {//Opens login screen
     cy.visit('#/login')
   })
-  
+  ///Test Case Section
   it('Should check if user is on Login Page', () => {
     cy.get(login.pageHeader).should('be.visible').should('contains.text',uiTexts.signInPageHeader)
   })

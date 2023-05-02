@@ -1,13 +1,13 @@
 describe("API Test Cases for user creation", () => {
    const apiUrl = Cypress.env('apiUrl')
    let userData:any
-    before(() => {
+    before(() => {//Loads user data for API SignUp
         cy.fixture("newUsers").then((data) => {
           userData = data
           return userData
         })
       })
-    
+//Test Case Section    
       it("Should create a new user",() =>{
         cy.request({
             method:"POST",

@@ -23,6 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
 Cypress.Commands.add("openHomePage", () => {
   // visits the baseUrl setted up in cypress.json
   cy.visit("/")
@@ -43,16 +44,21 @@ Cypress.Commands.add("userLogin", () => {
 }).then((response) => { 
     window.localStorage.setItem('jwtToken', response.body.user.token)
   })
-
+})
   Cypress.Commands.add("deleteCreatedArticle", () => {
-    //cy.userLogin()
     cy.request({ 
       method:"DELETE",
       url: Cypress.env('apiUrl')+'/articles/'+Cypress.env('ArticleSlug'),
       headers:{
         'Authorization': 'Token '+window.localStorage.getItem('jwtToken')
-    },
-     
+    },  
     })
   })
+
+Cypress.Commands.add("loadCustomTags", () => {
+  cy.intercept("GET", Cypress.env('apiUrl')+'/tags*').as("tagList")
+  cy.intercept("GET", Cypress.env('apiUrl')+'/tags*', {
+      fixture: "tagList.json",
+  }).as("mockedTags")
 })
+

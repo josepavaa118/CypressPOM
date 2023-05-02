@@ -25,6 +25,7 @@ declare global {
         openHomePage(): Chainable<Element>
         userLogin(): Chainable<Element>
         deleteCreatedArticle(): Chainable<Element>
+        loadCustomTags(): Chainable<Element>
       }
     }
   }

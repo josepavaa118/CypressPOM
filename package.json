@@ -3,7 +3,7 @@
     "cypress": "^12.8.1"
   },
   "scripts": {
-    "run-dashboard": "npx cypress run --record --spec 'cypress/e2e/spec.cy.ts'"
+    "run-dashboard": "npx cypress run --record --spec 'cypress/e2e/HomePage.cy.ts'"
   },
   "dependencies": {
     "typescript": "^5.0.2"

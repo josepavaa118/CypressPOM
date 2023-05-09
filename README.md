@@ -11,6 +11,9 @@ Some time ago I have created a test suite using Page Object Model for one of the
 This project was created using Cypress and Typescript.
 
 ---
+## Cypress Run Results
+Below you can find the results of test runs recorded on Cypress Dashboard for this project
+[![CypressPOM](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/detailed/ghkhiq&style=flat&logo=cypress)](https://cloud.cypress.io/projects/ghkhiq/runs)
 
 ## Goals
 
@@ -38,6 +41,10 @@ Follow these steps in order to get a working copy of the project
 3. 'fixtures' Folder: This folder contains .json files that are required as part of the testing flows. Can be used to store data like usernames, passwords, input values and so on...
 4. 'selectors' Folder: This folder contains all Web Elements/selector files that should be interacted/used as part of the testing flow, along with their respective methods for different user interactions.
 5. 'support' Folder: The only relevant file here is 'commands' which includes the custom Cypress commands created for this project's usage
+6. 'APITests' Folder: Includes relevant spec files containing API Tests
+
+## Cypress Dashboard
+This project is integrated with Cypress Dashboard. However if you want to setup your own Cypress Dashboard you'll need to follow the steps given on Cypress [Documentation](https://docs.cypress.io/guides/cloud/getting-started). You'll also need to setup the privacy of your Record Key. Otherwise unallowed people may be able to record test executions on your project and consume your monthly tests (or even unwanted charges for test execution). It is wise to set it on a local environment variable (Check your OS instructions about how to create an Environment Variable). This project has a custom script to run and record on console, just type `npm run-script run-dashboard`, remeber first to setup your Cypress Dashboard, otherwise you will get an error.
 
 ## Upcoming updates
 *I plan to keep improving this project, and as such I will work on adding additional tests for the time being.*

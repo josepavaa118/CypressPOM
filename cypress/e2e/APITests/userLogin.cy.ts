@@ -2,14 +2,13 @@ describe("Login Endpoint Testing", () => {
     const apiUrl = Cypress.env('apiUrl')
     let userData:any
      before(() => {
-         cy.fixture("newUsers").then((data) => {
+         cy.fixture("newUsers").then((data) => {//Loads user data for API Login
            userData = data
            return userData
          })
        })
-     
+ //Test Case Section    
        it("Should login as an existing user",() =>{
-         //cy.log(userData.user.email)
          cy.request({
              method:"POST",
              url: apiUrl+'/users/login',

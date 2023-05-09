@@ -23,11 +23,12 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-Cypress.Commands.add("openHomePage", () => {
-  // visits the baseUrl setted up in cypress.json
+
+Cypress.Commands.add("openHomePage", () => { // This cmd is used to open the home page from the tests
   cy.visit("/")
 })
-Cypress.Commands.add("userLogin", () => {
+
+Cypress.Commands.add("userLogin", () => { // This cmd allows user logins directly from API, returns a set localstorage cookie in test browser
   cy.request({ 
     method:"POST",
     url: Cypress.env('apiUrl')+'/users/login',
@@ -43,16 +44,22 @@ Cypress.Commands.add("userLogin", () => {
 }).then((response) => { 
     window.localStorage.setItem('jwtToken', response.body.user.token)
   })
+})
 
-  Cypress.Commands.add("deleteCreatedArticle", () => {
-    //cy.userLogin()
+  Cypress.Commands.add("deleteCreatedArticle", () => { // This cmd deletes the UI-created article from API
     cy.request({ 
       method:"DELETE",
       url: Cypress.env('apiUrl')+'/articles/'+Cypress.env('ArticleSlug'),
       headers:{
         'Authorization': 'Token '+window.localStorage.getItem('jwtToken')
-    },
-     
+    },  
     })
   })
+
+Cypress.Commands.add("loadCustomTags", () => { // This cmd mocks the GET /tags response from API to a specific set/amount of tags
+  cy.intercept("GET", Cypress.env('apiUrl')+'/tags*').as("tagList")
+  cy.intercept("GET", Cypress.env('apiUrl')+'/tags*', {
+      fixture: "tagList.json",
+  }).as("mockedTags")
 })
+

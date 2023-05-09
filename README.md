@@ -13,7 +13,7 @@ This project was created using Cypress and Typescript.
 ---
 ## Cypress Run Results
 Below you can find the results of test runs recorded on Cypress Dashboard for this project
-[![CypressPOM](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/simple/ghkhiq&style=flat&logo=cypress)](https://cloud.cypress.io/projects/ghkhiq/runs)
+[![CypressPOM](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/detailed/ghkhiq&style=flat&logo=cypress)](https://cloud.cypress.io/projects/ghkhiq/runs)
 
 ## Goals
 

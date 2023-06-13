@@ -1,4 +1,4 @@
-# **Cypress** With Easy POM -Rev April 1st 2023
+# **Cypress** With Easy POM -Rev Jun 13 2023
 
 ## Background
 Some time ago I have created a test suite using Page Object Model for one of the projects I've worked. However, it was implemented using classes much selenium-style like, and our Lead was wondering if there was a "Cypress Way" to do it without implement such abstraction methods. After doing some research on my own and some back and forth, I reached the conclusion that there is no "Cypress Way", BUT... still.. there has to be a way to do so without such implementation, and I have found this way of handling things, which allowed me to respect Automated Best Practices, and keep away a class implementation. At the very end you'll find out which approach works best for your needs.
@@ -44,10 +44,10 @@ Follow these steps in order to get a working copy of the project
 6. 'APITests' Folder: Includes relevant spec files containing API Tests
 
 ## Cypress Dashboard
-This project is integrated with Cypress Dashboard. However if you want to setup your own Cypress Dashboard you'll need to follow the steps given on Cypress [Documentation](https://docs.cypress.io/guides/cloud/getting-started). You'll also need to setup the privacy of your Record Key. Otherwise unallowed people may be able to record test executions on your project and consume your monthly tests (or even unwanted charges for test execution). It is wise to set it on a local environment variable (Check your OS instructions about how to create an Environment Variable). This project has a custom script to run and record on console, just type `npm run-script run-dashboard`, remeber first to setup your Cypress Dashboard, otherwise you will get an error.
+This project is integrated with Cypress Dashboard. However if you want to setup your own Cypress Dashboard you'll need to follow the steps given on Cypress [Documentation](https://docs.cypress.io/guides/cloud/getting-started). You'll also need to setup the privacy of your Record Key. Otherwise unallowed people may be able to record test executions on your project and consume your monthly tests (or even unwanted charges for test execution). You can achieve this by setting it up on your `cypress.env.json` file, or as an OS Environment Variable (Check the instructions according to your OS, As for myself I'm mostly working this on Windows). This project has a custom script to run and record on console, just type `npm run-script run-dashboard`, remeber first to setup your Cypress Dashboard, otherwise you will get an error.
 
 ## Upcoming updates
-*I plan to keep improving this project, and as such I will work on adding additional tests for the time being.*
+*Multiple Reporters, Additional Test Cases, Maybe CI/CD Stuff, Refactor*
 
 ## Disclaimer
 *As I move forward with this project this ReadMe file may change, along with any description or steps given previously*

@@ -26,6 +26,8 @@ declare global {
         userLogin(): Chainable<Element>
         deleteCreatedArticle(): Chainable<Element>
         loadCustomTags(): Chainable<Element>
+        loadCustomArticleList():Chainable<Element>
+        setArticleAsFavorite():Chainable<Element>
       }
     }
   }

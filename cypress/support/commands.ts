@@ -63,3 +63,17 @@ Cypress.Commands.add("loadCustomTags", () => { // This cmd mocks the GET /tags r
   }).as("mockedTags")
 })
 
+Cypress.Commands.add("loadCustomArticleList", () => { // This cmd mocks the GET /tags response from API to a specific set/amount of tags
+  cy.intercept("GET", Cypress.env('apiUrl')+'/articles*').as("articles")
+  cy.intercept("GET", Cypress.env('apiUrl')+'/articles*', {
+      fixture: "articleList.json",
+  }).as("mockedArticles")
+})
+
+Cypress.Commands.add("setArticleAsFavorite", () => { // This cmd mocks the GET /tags response from API to a specific set/amount of tags
+  cy.fixture('articleList.json').then(file=>{
+    const articleLink=file.articles[0].slug
+    file.articles[0].favoritesCount=2 
+    cy.intercept('POST',Cypress.env('apiUrl')+'/articles/'+articleLink+'/favorite',file)
+  })
+})

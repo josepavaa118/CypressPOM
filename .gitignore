@@ -48,3 +48,6 @@ Thumbs.db
 *.mov
 *.wmv
 
+#System Files
+
+cypress.env.json

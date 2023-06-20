@@ -11,5 +11,10 @@ module.exports = defineConfig({
 
     },
     baseUrl: "http://angularjs.realworld.io/",
+    reporter: 'cypress-multi-reporters',
+    reporterOptions: {
+      configFile: 'reporter-config.json',
+    },
+    
   },
 })

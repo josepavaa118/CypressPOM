@@ -51,3 +51,4 @@ Thumbs.db
 #System Files
 
 cypress.env.json
+cypress/results/

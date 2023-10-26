@@ -5,6 +5,7 @@ module.exports = defineConfig({
   env: {  
     apiUrl: 'https://api.realworld.io/api',
 },
+retries:1,
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here

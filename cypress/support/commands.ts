@@ -24,11 +24,11 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add("openHomePage", () => { // This cmd is used to open the home page from the tests
+Cypress.Commands.add("openHomePage", () => { 
   cy.visit("/")
 })
 
-Cypress.Commands.add("userLogin", () => { // This cmd allows user logins directly from API, returns a set localstorage cookie in test browser
+Cypress.Commands.add("userLogin", () => { 
   cy.request({ 
     method:"POST",
     url: Cypress.env('apiUrl')+'/users/login',
@@ -46,7 +46,7 @@ Cypress.Commands.add("userLogin", () => { // This cmd allows user logins directl
   })
 })
 
-  Cypress.Commands.add("deleteCreatedArticle", () => { // This cmd deletes the UI-created article from API
+  Cypress.Commands.add("deleteCreatedArticle", () => { 
     cy.request({ 
       method:"DELETE",
       url: Cypress.env('apiUrl')+'/articles/'+Cypress.env('ArticleSlug'),
@@ -56,21 +56,21 @@ Cypress.Commands.add("userLogin", () => { // This cmd allows user logins directl
     })
   })
 
-Cypress.Commands.add("loadCustomTags", () => { // This cmd mocks the GET /tags response from API to a specific set/amount of tags
+Cypress.Commands.add("loadCustomTags", () => { 
   cy.intercept("GET", Cypress.env('apiUrl')+'/tags*').as("tagList")
   cy.intercept("GET", Cypress.env('apiUrl')+'/tags*', {
       fixture: "tagList.json",
   }).as("mockedTags")
 })
 
-Cypress.Commands.add("loadCustomArticleList", () => { // This cmd mocks the GET /tags response from API to a specific set/amount of tags
+Cypress.Commands.add("loadCustomArticleList", () => { 
   cy.intercept("GET", Cypress.env('apiUrl')+'/articles*').as("articles")
   cy.intercept("GET", Cypress.env('apiUrl')+'/articles*', {
       fixture: "articleList.json",
   }).as("mockedArticles")
 })
 
-Cypress.Commands.add("setArticleAsFavorite", () => { // This cmd mocks the GET /tags response from API to a specific set/amount of tags
+Cypress.Commands.add("setArticleAsFavorite", () => { 
   cy.fixture('articleList.json').then(file=>{
     const articleLink=file.articles[0].slug
     file.articles[0].favoritesCount=2 

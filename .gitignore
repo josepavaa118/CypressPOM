@@ -51,3 +51,8 @@ Thumbs.db
 #System Files
 
 cypress.env.json
+cypress/results/
+mochawesome-report/
+cypress/screenshots/
+mochawesome.json
+cypress/screenshots/

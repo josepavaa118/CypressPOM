@@ -1,4 +1,4 @@
-# **Cypress** With Easy POM -Rev Oct 25 2023
+# **Cypress** With Easy POM -Rev Oct 27 2023
 
 ## Background
 Some time ago I have created a test suite using Page Object Model for one of the projects I've worked. However, it was implemented using classes much selenium-style like, and our Lead was wondering if there was a "Cypress Way" to do it without implement such abstraction methods. After doing some research on my own and some back and forth, I reached the conclusion that there is no "Cypress Way", BUT... still.. there has to be a way to do so without such implementation, and I have found this way of handling things, which allowed me to respect Automated Best Practices, and keep away a class implementation. At the very end you'll find out which approach works best for your needs.
@@ -42,6 +42,7 @@ Follow these steps in order to get a working copy of the project
 4. 'selectors' Folder: This folder contains all Web Elements/selector files that should be interacted/used as part of the testing flow, along with their respective methods for different user interactions.
 5. 'support' Folder: The only relevant file here is 'commands' which includes the custom Cypress commands created for this project's usage
 6. 'APITests' Folder: Includes relevant spec files containing API Tests
+7. There is a file called "general-tests.d.ts' that contains detailed information about the Custom Commands used on this project
 
 ## Cypress Dashboard
 This project is integrated with Cypress Dashboard. However if you want to setup your own Cypress Dashboard you'll need to follow the steps given on Cypress [Documentation](https://docs.cypress.io/guides/cloud/getting-started). You'll also need to setup the privacy of your Record Key. Otherwise unallowed people may be able to record test executions on your project and consume your monthly tests (or even unwanted charges for test execution). You can achieve this by setting it up on your `cypress.env.json` file, or as an OS Environment Variable (Check the instructions according to your OS, As for myself I'm mostly working this on Windows). This project has a custom script to run and record on console, just type `npm run-script run-dashboard`, remeber first to setup your Cypress Dashboard, otherwise you will get an error.
@@ -50,7 +51,7 @@ This project is integrated with Cypress Dashboard. However if you want to setup 
 `npm run cypress:report` Will allow you to run the automation in headless mode with reports enabled. Default Browser: Electron (this can be changed if necessary)
 
 ## Upcoming updates
-* Additional Test Cases, Cypress Update and a heavy Refactor will be done*
+* Additional Test Cases and a heavy Refactor will be done*
 
 ## Discarded Work
 * I was trying to set up this automation with Docker, however for some reason it simply didn't work. The idea was to get the generated reports from the Docker Image, but everytime all I've got was an empty folder. Since I was following some Cypress course I (of coursed) compared the situation with different course mates and even the instructor. But it seems like this is some weird issue not even the instructor was able to address. So after several attempts to solve it. I had no choice but to discard it

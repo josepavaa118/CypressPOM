@@ -52,4 +52,7 @@ Thumbs.db
 
 cypress.env.json
 cypress/results/
-mochawesome-report
+mochawesome-report/
+cypress/screenshots/
+mochawesome.json
+cypress/screenshots/

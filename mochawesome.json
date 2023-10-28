@@ -2,23 +2,23 @@
   "stats": {
     "suites": 7,
     "tests": 19,
-    "passes": 17,
+    "passes": 18,
     "pending": 0,
-    "failures": 2,
+    "failures": 1,
     "testsRegistered": 19,
-    "passPercent": 89.47368421052632,
+    "passPercent": 94.73684210526316,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2023-10-26T01:08:54.535Z",
-    "end": "2023-10-26T01:09:40.615Z",
-    "duration": 46080
+    "start": "2023-10-28T04:19:29.409Z",
+    "end": "2023-10-28T04:20:10.510Z",
+    "duration": 41101
   },
   "results": [
     {
-      "uuid": "50fb0bfd-fe9b-4281-b873-859d65ed42a7",
+      "uuid": "8458badb-eab6-4631-a615-495477666cf1",
       "title": "",
       "fullFile": "cypress\\e2e\\HomePage.cy.ts",
       "file": "cypress\\e2e\\HomePage.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f975ddba-ced7-48d3-8224-559c10c05eed",
+          "uuid": "19ae90a5-a117-4adf-af87-851d092fc09c",
           "title": "Home Page Test Cases",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should display Home Page",
               "fullTitle": "Home Page Test Cases Should display Home Page",
               "timedOut": null,
-              "duration": 1339,
+              "duration": 2707,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.get(appHome.homePageHeader).should('be.visible').should('have.text', uiTexts.homePageHeader);",
               "err": {},
-              "uuid": "1d3e1021-b3f0-4387-901c-2de3f313af68",
-              "parentUUID": "f975ddba-ced7-48d3-8224-559c10c05eed",
+              "uuid": "51128964-d4c1-4410-b473-88617011973a",
+              "parentUUID": "19ae90a5-a117-4adf-af87-851d092fc09c",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Should redirect to Sign In Page",
               "fullTitle": "Home Page Test Cases Should redirect to Sign In Page",
               "timedOut": null,
-              "duration": 278,
+              "duration": 341,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.get(appHome.signInLink).click();\ncy.get(appSignIn.pageHeader).should('be.visible').should('have.text', uiTexts.signInPageHeader);",
               "err": {},
-              "uuid": "c15b55b9-df08-4aa7-95eb-5e00df7b234c",
-              "parentUUID": "f975ddba-ced7-48d3-8224-559c10c05eed",
+              "uuid": "b3f3d8c7-a28c-411a-afab-b8bb09dc2a74",
+              "parentUUID": "19ae90a5-a117-4adf-af87-851d092fc09c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1d3e1021-b3f0-4387-901c-2de3f313af68",
-            "c15b55b9-df08-4aa7-95eb-5e00df7b234c"
+            "51128964-d4c1-4410-b473-88617011973a",
+            "b3f3d8c7-a28c-411a-afab-b8bb09dc2a74"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1617,
+          "duration": 3048,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,7 +95,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "b92f6bd2-14a0-407e-8929-2860933ddcd9",
+      "uuid": "5dca1764-97f8-468b-9c4b-630efe824035",
       "title": "",
       "fullFile": "cypress\\e2e\\newArticle.cy.ts",
       "file": "cypress\\e2e\\newArticle.cy.ts",
@@ -104,7 +104,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8d1fe105-bae3-4a98-814b-b5c87b086c48",
+          "uuid": "8f2ae0a8-b276-4a1e-a1f8-45171b667ae3",
           "title": "template spec",
           "fullFile": "",
           "file": "",
@@ -115,7 +115,7 @@
               "title": "Should check if user is logged in",
               "fullTitle": "template spec Should check if user is logged in",
               "timedOut": null,
-              "duration": 1586,
+              "duration": 3133,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -124,8 +124,8 @@
               "context": null,
               "code": "cy.get(feed.loggedUser).should('be.visible').and('contains.text', userData.username);",
               "err": {},
-              "uuid": "d176ed3b-00c0-46a0-bfe2-98976286bc59",
-              "parentUUID": "8d1fe105-bae3-4a98-814b-b5c87b086c48",
+              "uuid": "c5036f56-ab64-4366-acbc-fa96827eb807",
+              "parentUUID": "8f2ae0a8-b276-4a1e-a1f8-45171b667ae3",
               "isHook": false,
               "skipped": false
             },
@@ -133,7 +133,7 @@
               "title": "Should open New Article view",
               "fullTitle": "template spec Should open New Article view",
               "timedOut": null,
-              "duration": 1071,
+              "duration": 881,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -142,8 +142,8 @@
               "context": null,
               "code": "cy.contains(feed.newArticleLink).click();\ncy.get('.btn').should('be.visible').and('contains.text', uiTexts.publishBtn);",
               "err": {},
-              "uuid": "a9dbf7fe-8175-4f21-8854-d58b9a1b4202",
-              "parentUUID": "8d1fe105-bae3-4a98-814b-b5c87b086c48",
+              "uuid": "f8240dfe-d235-4814-892a-24c536f18bfa",
+              "parentUUID": "8f2ae0a8-b276-4a1e-a1f8-45171b667ae3",
               "isHook": false,
               "skipped": false
             },
@@ -151,7 +151,7 @@
               "title": "Should not create a new Article when title is empty",
               "fullTitle": "template spec Should not create a new Article when title is empty",
               "timedOut": null,
-              "duration": 3033,
+              "duration": 2926,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -160,8 +160,8 @@
               "context": null,
               "code": "cy.contains(feed.newArticleLink).click();\ncy.get(article.description).type(articleData.description);\ncy.get(article.body).type(articleData.body);\ncy.get(article.tags).type(articleData.tags);\ncy.contains(article.button).click();\ncy.get(article.titleErrorMsg).should('be.visible').and('contains.text', articleData.errorMsg);",
               "err": {},
-              "uuid": "8e0e74a1-dc1e-4470-9923-e949dabd3133",
-              "parentUUID": "8d1fe105-bae3-4a98-814b-b5c87b086c48",
+              "uuid": "36183991-6f37-44d2-a377-87756056279b",
+              "parentUUID": "8f2ae0a8-b276-4a1e-a1f8-45171b667ae3",
               "isHook": false,
               "skipped": false
             },
@@ -169,7 +169,7 @@
               "title": "Should create a new Article",
               "fullTitle": "template spec Should create a new Article",
               "timedOut": null,
-              "duration": 3976,
+              "duration": 3703,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -178,23 +178,23 @@
               "context": null,
               "code": "cy.contains(feed.newArticleLink).click();\ncy.get(article.title).type(articleData.title);\ncy.get(article.description).type(articleData.description);\ncy.get(article.body).type(articleData.body);\ncy.get(article.tags).type(articleData.tags);\ncy.contains(article.button).click();\ncy.get('h1.ng-binding').should('be.visible').should('contains.text', articleData.title);",
               "err": {},
-              "uuid": "bcf92d3e-a1e7-47ef-a8ab-6774dbc3773e",
-              "parentUUID": "8d1fe105-bae3-4a98-814b-b5c87b086c48",
+              "uuid": "c95d150e-a271-4dae-a714-8c2a97ac3e17",
+              "parentUUID": "8f2ae0a8-b276-4a1e-a1f8-45171b667ae3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d176ed3b-00c0-46a0-bfe2-98976286bc59",
-            "a9dbf7fe-8175-4f21-8854-d58b9a1b4202",
-            "8e0e74a1-dc1e-4470-9923-e949dabd3133",
-            "bcf92d3e-a1e7-47ef-a8ab-6774dbc3773e"
+            "c5036f56-ab64-4366-acbc-fa96827eb807",
+            "f8240dfe-d235-4814-892a-24c536f18bfa",
+            "36183991-6f37-44d2-a377-87756056279b",
+            "c95d150e-a271-4dae-a714-8c2a97ac3e17"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 9666,
+          "duration": 10643,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -210,7 +210,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "7c5935d9-895b-49c8-8b0e-56b80878f8ce",
+      "uuid": "4810d2f4-b5a5-482d-9d63-6d11a0627629",
       "title": "",
       "fullFile": "cypress\\e2e\\tags.cy.ts",
       "file": "cypress\\e2e\\tags.cy.ts",
@@ -219,7 +219,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "52e6836f-26dc-48aa-b63f-f267e169a4be",
+          "uuid": "86f97272-be65-4fd6-ad93-01d210f1ab03",
           "title": "Tag list Testing",
           "fullFile": "",
           "file": "",
@@ -230,7 +230,7 @@
               "title": "Should display tag list",
               "fullTitle": "Tag list Testing Should display tag list",
               "timedOut": null,
-              "duration": 1784,
+              "duration": 3297,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -239,8 +239,8 @@
               "context": null,
               "code": "cy.get(tags.tag1).should('be.visible');",
               "err": {},
-              "uuid": "eb69f184-9047-4917-acfe-5d65d96ed93e",
-              "parentUUID": "52e6836f-26dc-48aa-b63f-f267e169a4be",
+              "uuid": "70390aa5-f349-4e53-a24e-8bc1482fb69f",
+              "parentUUID": "86f97272-be65-4fd6-ad93-01d210f1ab03",
               "isHook": false,
               "skipped": false
             },
@@ -248,7 +248,7 @@
               "title": "Should check tag list",
               "fullTitle": "Tag list Testing Should check tag list",
               "timedOut": null,
-              "duration": 367,
+              "duration": 389,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -257,8 +257,8 @@
               "context": null,
               "code": "cy.get(tags.tag1).and('have.text', tagList.tags[0]);\ncy.get(tags.tag2).should('be.visible').and('have.text', tagList.tags[1]);\ncy.get(tags.tag3).should('be.visible').and('have.text', tagList.tags[2]);\ncy.get(tags.tag4).should('be.visible').and('have.text', tagList.tags[3]);",
               "err": {},
-              "uuid": "2b22a6db-efc0-4719-9c1a-297ea73271b1",
-              "parentUUID": "52e6836f-26dc-48aa-b63f-f267e169a4be",
+              "uuid": "62b60236-5c81-466f-a372-4e51f16d42f0",
+              "parentUUID": "86f97272-be65-4fd6-ad93-01d210f1ab03",
               "isHook": false,
               "skipped": false
             },
@@ -266,7 +266,7 @@
               "title": "Should check if the right amount of tags are displayed",
               "fullTitle": "Tag list Testing Should check if the right amount of tags are displayed",
               "timedOut": null,
-              "duration": 630,
+              "duration": 328,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -275,22 +275,22 @@
               "context": null,
               "code": "cy.get(tags.tagList).children().should('have.length', 4);",
               "err": {},
-              "uuid": "5c275b62-f39f-44d7-8663-e67fa6bc6cb0",
-              "parentUUID": "52e6836f-26dc-48aa-b63f-f267e169a4be",
+              "uuid": "e610bf9a-0e17-4801-b395-3f2a01fe3f5c",
+              "parentUUID": "86f97272-be65-4fd6-ad93-01d210f1ab03",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "eb69f184-9047-4917-acfe-5d65d96ed93e",
-            "2b22a6db-efc0-4719-9c1a-297ea73271b1",
-            "5c275b62-f39f-44d7-8663-e67fa6bc6cb0"
+            "70390aa5-f349-4e53-a24e-8bc1482fb69f",
+            "62b60236-5c81-466f-a372-4e51f16d42f0",
+            "e610bf9a-0e17-4801-b395-3f2a01fe3f5c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2781,
+          "duration": 4014,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -306,7 +306,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "fea4b7cc-45f4-4162-92a2-77a22e42eb5b",
+      "uuid": "e8d5b3c1-320a-4835-8eab-25b3c578e7df",
       "title": "",
       "fullFile": "cypress\\e2e\\uiLoginTest.cy.ts",
       "file": "cypress\\e2e\\uiLoginTest.cy.ts",
@@ -315,7 +315,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a266b894-4171-40dc-a3ac-43ca807858f3",
+          "uuid": "bf9d5235-a0af-42e3-8072-daadc8678693",
           "title": "Login Tests using UI",
           "fullFile": "",
           "file": "",
@@ -326,7 +326,7 @@
               "title": "Should check if user is on Login Page",
               "fullTitle": "Login Tests using UI Should check if user is on Login Page",
               "timedOut": null,
-              "duration": 1079,
+              "duration": 2550,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -335,8 +335,8 @@
               "context": null,
               "code": "cy.get(login.pageHeader).should('be.visible').should('contains.text', uiTexts.signInPageHeader);",
               "err": {},
-              "uuid": "6ca9e8e6-b36c-4176-a74b-17489ece6b94",
-              "parentUUID": "a266b894-4171-40dc-a3ac-43ca807858f3",
+              "uuid": "2aabb0b2-77d8-4447-974c-a460179ea274",
+              "parentUUID": "bf9d5235-a0af-42e3-8072-daadc8678693",
               "isHook": false,
               "skipped": false
             },
@@ -344,7 +344,7 @@
               "title": "Should check error message displayed when no password is given",
               "fullTitle": "Login Tests using UI Should check error message displayed when no password is given",
               "timedOut": null,
-              "duration": 1108,
+              "duration": 1474,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -353,8 +353,8 @@
               "context": null,
               "code": "cy.get(login.userField).should('be.visible').type('some@email.com');\ncy.get(login.submitBtn).should('be.visible').click();\ncy.get(login.errorMsg).should('be.visible').should('contains.text', uiTexts.pwdError);",
               "err": {},
-              "uuid": "9714033f-8c2c-4b59-ac27-5c4b56f466b1",
-              "parentUUID": "a266b894-4171-40dc-a3ac-43ca807858f3",
+              "uuid": "726bca5f-0335-4295-89ee-0a31e4da1f7e",
+              "parentUUID": "bf9d5235-a0af-42e3-8072-daadc8678693",
               "isHook": false,
               "skipped": false
             },
@@ -362,7 +362,7 @@
               "title": "Should check error message displayed when no email is given",
               "fullTitle": "Login Tests using UI Should check error message displayed when no email is given",
               "timedOut": null,
-              "duration": 780,
+              "duration": 760,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -371,8 +371,8 @@
               "context": null,
               "code": "cy.get(login.passwordField).should('be.visible').type('somePassword');\ncy.get(login.submitBtn).should('be.visible').click();\ncy.get(login.errorMsg).should('be.visible').should('contains.text', uiTexts.emailError);",
               "err": {},
-              "uuid": "b9aca3f1-a279-496a-bd8f-64e61680ecf2",
-              "parentUUID": "a266b894-4171-40dc-a3ac-43ca807858f3",
+              "uuid": "aa0f51a3-25f7-4646-9b65-172e8ff4f8e2",
+              "parentUUID": "bf9d5235-a0af-42e3-8072-daadc8678693",
               "isHook": false,
               "skipped": false
             },
@@ -380,7 +380,7 @@
               "title": "Should login successfully when using valid credentials",
               "fullTitle": "Login Tests using UI Should login successfully when using valid credentials",
               "timedOut": null,
-              "duration": 1539,
+              "duration": 1302,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -389,8 +389,8 @@
               "context": null,
               "code": "cy.get(login.userField).should('be.visible').type(userData.email);\ncy.get(login.passwordField).should('be.visible').type(userData.password);\ncy.get(login.submitBtn).should('be.visible').click();\ncy.get(feed.loggedUser).should('be.visible').should('contains.text', userData.username);",
               "err": {},
-              "uuid": "182965bb-2e6d-428d-9c49-86c90fb32227",
-              "parentUUID": "a266b894-4171-40dc-a3ac-43ca807858f3",
+              "uuid": "c1b29f7f-125d-44c5-90d7-ba2c8559b835",
+              "parentUUID": "bf9d5235-a0af-42e3-8072-daadc8678693",
               "isHook": false,
               "skipped": false
             },
@@ -398,7 +398,7 @@
               "title": "Should redirect to Sign In Page when clicking Sign In Link",
               "fullTitle": "Login Tests using UI Should redirect to Sign In Page when clicking Sign In Link",
               "timedOut": null,
-              "duration": 295,
+              "duration": 326,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -407,24 +407,24 @@
               "context": null,
               "code": "cy.get(login.signUpLink).should('be.visible').should('contains.text', uiTexts.signInLink).click();\ncy.get(login.pageHeader).should('be.visible').should('contains.text', uiTexts.signUpPageHeader);",
               "err": {},
-              "uuid": "74a873c6-6ed7-45ee-893a-3a637e49a607",
-              "parentUUID": "a266b894-4171-40dc-a3ac-43ca807858f3",
+              "uuid": "c69dc687-a164-4341-bcf4-554922130714",
+              "parentUUID": "bf9d5235-a0af-42e3-8072-daadc8678693",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6ca9e8e6-b36c-4176-a74b-17489ece6b94",
-            "9714033f-8c2c-4b59-ac27-5c4b56f466b1",
-            "b9aca3f1-a279-496a-bd8f-64e61680ecf2",
-            "182965bb-2e6d-428d-9c49-86c90fb32227",
-            "74a873c6-6ed7-45ee-893a-3a637e49a607"
+            "2aabb0b2-77d8-4447-974c-a460179ea274",
+            "726bca5f-0335-4295-89ee-0a31e4da1f7e",
+            "aa0f51a3-25f7-4646-9b65-172e8ff4f8e2",
+            "c1b29f7f-125d-44c5-90d7-ba2c8559b835",
+            "c69dc687-a164-4341-bcf4-554922130714"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4801,
+          "duration": 6412,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -440,7 +440,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "03540e9e-4540-4d65-9046-3a92012820cc",
+      "uuid": "3a332a17-28a6-46a0-aec9-8eea9e271bb8",
       "title": "",
       "fullFile": "cypress\\e2e\\APITests\\createUser.cy.ts",
       "file": "cypress\\e2e\\APITests\\createUser.cy.ts",
@@ -449,7 +449,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "777d215a-1254-4413-8af5-46a77097aabd",
+          "uuid": "3c440b86-e1e2-47d1-9b6d-d3680a1263ee",
           "title": "API Test Cases for user creation",
           "fullFile": "",
           "file": "",
@@ -460,7 +460,7 @@
               "title": "Should create a new user",
               "fullTitle": "API Test Cases for user creation Should create a new user",
               "timedOut": null,
-              "duration": 443,
+              "duration": 252,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -469,12 +469,12 @@
               "context": null,
               "code": "cy.request({\n    method: \"POST\",\n    url: apiUrl + '/users',\n    headers: {\n        'Content-Type': 'application/json'\n    },\n    body: {\n        \"user\": {\n            \"username\": userData.username,\n            \"email\": userData.email,\n            \"password\": userData.password\n        }\n    }\n}).as('createUser');\ncy.get('@createUser').then(function (response) {\n    expect(response.status).to.eq(200);\n    expect(response.body.user.email).to.contain(userData.user.email);\n});",
               "err": {
-                "message": "CypressError: `cy.request()` failed on:\n\nhttps://api.realworld.io/api/users\n\nThe response we received from your web server was:\n\n  > 422: Unprocessable Entity\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://api.realworld.io/api/users\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Content-Type\": \"application/json\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.8.1 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 101\n}\nBody: {\"user\":{\"username\":\"jvargasatestcr\",\"email\":\"jvargasatestcr@mailinator.com\",\"password\":\"Super132!\"}}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 422 - Unprocessable Entity\nHeaders: {\n  \"date\": \"Thu, 26 Oct 2023 01:09:36 GMT\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"85\",\n  \"connection\": \"keep-alive\",\n  \"x-powered-by\": \"Express\",\n  \"access-control-allow-origin\": \"*\",\n  \"etag\": \"W/\\\"55-NjrsT9gca4ZDmlQ/ixYZy7cuscc\\\"\",\n  \"via\": \"1.1 vegur\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=NR0Ez42h68WKYhJK9uMhBzwhupd3shaQxSIkdwiyHbzRqONwej9UDcnBTmPykO%2F8DQPE5Xbf%2BxI52nSDocYS4V%2F7ZCBV1XoBMs1yvmGSDl6L4RXAOXAxhY1qG%2B0%2BHVfWRp%2Ba\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"server\": \"cloudflare\",\n  \"cf-ray\": \"81bed0990f9b3dcd-MIA\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=86400\"\n}\nBody: {\n  \"errors\": {\n    \"email\": [\n      \"has already been taken\"\n    ],\n    \"username\": [\n      \"has already been taken\"\n    ]\n  }\n}\n\n\nhttps://on.cypress.io/request",
-                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://api.realworld.io/api/users\n\nThe response we received from your web server was:\n\n  > 422: Unprocessable Entity\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://api.realworld.io/api/users\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Content-Type\": \"application/json\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.8.1 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 101\n}\nBody: {\"user\":{\"username\":\"jvargasatestcr\",\"email\":\"jvargasatestcr@mailinator.com\",\"password\":\"Super132!\"}}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 422 - Unprocessable Entity\nHeaders: {\n  \"date\": \"Thu, 26 Oct 2023 01:09:36 GMT\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"85\",\n  \"connection\": \"keep-alive\",\n  \"x-powered-by\": \"Express\",\n  \"access-control-allow-origin\": \"*\",\n  \"etag\": \"W/\\\"55-NjrsT9gca4ZDmlQ/ixYZy7cuscc\\\"\",\n  \"via\": \"1.1 vegur\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=NR0Ez42h68WKYhJK9uMhBzwhupd3shaQxSIkdwiyHbzRqONwej9UDcnBTmPykO%2F8DQPE5Xbf%2BxI52nSDocYS4V%2F7ZCBV1XoBMs1yvmGSDl6L4RXAOXAxhY1qG%2B0%2BHVfWRp%2Ba\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"server\": \"cloudflare\",\n  \"cf-ray\": \"81bed0990f9b3dcd-MIA\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=86400\"\n}\nBody: {\n  \"errors\": {\n    \"email\": [\n      \"has already been taken\"\n    ],\n    \"username\": [\n      \"has already been taken\"\n    ]\n  }\n}\n\n\nhttps://on.cypress.io/request\n    at <unknown> (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:139729:80)\n    at tryCatcher (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:8914:23)\n    at Promise._settlePromiseFromHandler (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:6849:31)\n    at Promise._settlePromise (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:6906:18)\n    at Promise._settlePromise0 (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:6951:10)\n    at Promise._settlePromises (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:7031:18)\n    at _drainQueueStep (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:3621:12)\n    at _drainQueue (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:3614:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:3630:5)\n    at Async.drainQueues (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:3500:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/APITests/createUser.cy.ts:12:0)",
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://api.realworld.io/api/users\n\nThe response we received from your web server was:\n\n  > 422: Unprocessable Entity\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://api.realworld.io/api/users\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Content-Type\": \"application/json\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.3.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 101\n}\nBody: {\"user\":{\"username\":\"jvargasatestcr\",\"email\":\"jvargasatestcr@mailinator.com\",\"password\":\"Super132!\"}}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 422 - Unprocessable Entity\nHeaders: {\n  \"date\": \"Sat, 28 Oct 2023 04:20:06 GMT\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"85\",\n  \"connection\": \"keep-alive\",\n  \"x-powered-by\": \"Express\",\n  \"access-control-allow-origin\": \"*\",\n  \"etag\": \"W/\\\"55-NjrsT9gca4ZDmlQ/ixYZy7cuscc\\\"\",\n  \"via\": \"1.1 vegur\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=E3I3fH9Fq7ujZEBVYeIAO5n2Ek6%2FcgO2zuw8OzW8UglT8YbFLlxU8p5AgSpqAb9MBzWOrekBFtiIzkNLc9cB3ZtszvleEk5ruvoqjbVTDhNlb1CyWwcmyPyfocper3VjOnKm\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"server\": \"cloudflare\",\n  \"cf-ray\": \"81d062621d782878-MIA\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=86400\"\n}\nBody: {\n  \"errors\": {\n    \"email\": [\n      \"has already been taken\"\n    ],\n    \"username\": [\n      \"has already been taken\"\n    ]\n  }\n}\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://api.realworld.io/api/users\n\nThe response we received from your web server was:\n\n  > 422: Unprocessable Entity\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://api.realworld.io/api/users\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Content-Type\": \"application/json\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.3.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 101\n}\nBody: {\"user\":{\"username\":\"jvargasatestcr\",\"email\":\"jvargasatestcr@mailinator.com\",\"password\":\"Super132!\"}}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 422 - Unprocessable Entity\nHeaders: {\n  \"date\": \"Sat, 28 Oct 2023 04:20:06 GMT\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"85\",\n  \"connection\": \"keep-alive\",\n  \"x-powered-by\": \"Express\",\n  \"access-control-allow-origin\": \"*\",\n  \"etag\": \"W/\\\"55-NjrsT9gca4ZDmlQ/ixYZy7cuscc\\\"\",\n  \"via\": \"1.1 vegur\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=E3I3fH9Fq7ujZEBVYeIAO5n2Ek6%2FcgO2zuw8OzW8UglT8YbFLlxU8p5AgSpqAb9MBzWOrekBFtiIzkNLc9cB3ZtszvleEk5ruvoqjbVTDhNlb1CyWwcmyPyfocper3VjOnKm\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"server\": \"cloudflare\",\n  \"cf-ray\": \"81d062621d782878-MIA\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=86400\"\n}\nBody: {\n  \"errors\": {\n    \"email\": [\n      \"has already been taken\"\n    ],\n    \"username\": [\n      \"has already been taken\"\n    ]\n  }\n}\n\n\nhttps://on.cypress.io/request\n    at <unknown> (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:133260:72)\n    at tryCatcher (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:1701:18)\n    at _drainQueueStep (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://angularjs.realworld.io/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/APITests/createUser.cy.ts:12:0)",
                 "diff": null
               },
-              "uuid": "d9c9bad7-1b37-4b42-a474-e890ab474159",
-              "parentUUID": "777d215a-1254-4413-8af5-46a77097aabd",
+              "uuid": "efb7dc12-f98f-49dc-8dbe-ca7d5620dcf4",
+              "parentUUID": "3c440b86-e1e2-47d1-9b6d-d3680a1263ee",
               "isHook": false,
               "skipped": false
             }
@@ -482,11 +482,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "d9c9bad7-1b37-4b42-a474-e890ab474159"
+            "efb7dc12-f98f-49dc-8dbe-ca7d5620dcf4"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 443,
+          "duration": 252,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -502,7 +502,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "6054b3b9-94d8-40d0-842d-825b16d88645",
+      "uuid": "847b227e-3c8a-47d4-94db-1741023e4975",
       "title": "",
       "fullFile": "cypress\\e2e\\APITests\\userLogin.cy.ts",
       "file": "cypress\\e2e\\APITests\\userLogin.cy.ts",
@@ -511,7 +511,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0940ff37-25db-40d0-87f4-f2610ec9db8d",
+          "uuid": "3252e257-9990-4cfd-80f3-bf821b11ad4e",
           "title": "Login Endpoint Testing",
           "fullFile": "",
           "file": "",
@@ -522,7 +522,7 @@
               "title": "Should login as an existing user",
               "fullTitle": "Login Endpoint Testing Should login as an existing user",
               "timedOut": null,
-              "duration": 317,
+              "duration": 298,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -531,20 +531,20 @@
               "context": null,
               "code": "cy.request({\n    method: \"POST\",\n    url: apiUrl + '/users/login',\n    headers: {\n        'Content-Type': 'application/json'\n    },\n    body: {\n        \"user\": {\n            \"email\": userData.email,\n            \"password\": userData.password\n        }\n    }\n}).as('userLogin');\ncy.get('@userLogin').then(function (response) {\n    var userToken = response.body.user.token;\n    cy.log(userToken);\n    expect(response.status).to.eq(200);\n    expect(response.body.user.email).to.contain(userData.email);\n});",
               "err": {},
-              "uuid": "e79e1678-f7a0-46bc-aa24-08f8822797d9",
-              "parentUUID": "0940ff37-25db-40d0-87f4-f2610ec9db8d",
+              "uuid": "d31da67f-c062-45c8-9c83-56fbc947c3aa",
+              "parentUUID": "3252e257-9990-4cfd-80f3-bf821b11ad4e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e79e1678-f7a0-46bc-aa24-08f8822797d9"
+            "d31da67f-c062-45c8-9c83-56fbc947c3aa"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 317,
+          "duration": 298,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -560,7 +560,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "22fe456c-f420-4a50-9e22-c68aa142cf0e",
+      "uuid": "d89c8206-bb37-4a37-95d7-bf8bd70925dd",
       "title": "",
       "fullFile": "cypress\\e2e\\feedTests.cy.ts",
       "file": "cypress\\e2e\\feedTests.cy.ts",
@@ -569,7 +569,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ce3946ef-65ad-4ac6-a0e1-7ede1a232b07",
+          "uuid": "ea70044d-b479-433a-8fc7-a13fffa4f6e1",
           "title": "API Test Cases for user creation",
           "fullFile": "",
           "file": "",
@@ -580,17 +580,17 @@
               "title": "Should check if article related objects are displayed",
               "fullTitle": "API Test Cases for user creation Should check if article related objects are displayed",
               "timedOut": null,
-              "duration": 4208,
+              "duration": 5131,
               "state": "passed",
-              "speed": "fast",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get(feed.articleTitle).should('be.visible').and('contains.text', 'Mock');",
               "err": {},
-              "uuid": "c078a4ca-6334-4737-bca3-3d78151786f3",
-              "parentUUID": "ce3946ef-65ad-4ac6-a0e1-7ede1a232b07",
+              "uuid": "ab79f00e-372c-47c4-8e7f-c3ff71ac0f7a",
+              "parentUUID": "ea70044d-b479-433a-8fc7-a13fffa4f6e1",
               "isHook": false,
               "skipped": false
             },
@@ -598,7 +598,7 @@
               "title": "Should check if article is set as favorite",
               "fullTitle": "API Test Cases for user creation Should check if article is set as favorite",
               "timedOut": null,
-              "duration": 1707,
+              "duration": 1747,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -607,8 +607,8 @@
               "context": null,
               "code": "cy.get(feed.articleFavorites).should('be.visible').and('contains.text', '1').click();\ncy.setArticleAsFavorite();\ncy.get(feed.articleFavorites).should('contains.text', '2');",
               "err": {},
-              "uuid": "5622ea79-6078-401a-b7e7-edbf110db18f",
-              "parentUUID": "ce3946ef-65ad-4ac6-a0e1-7ede1a232b07",
+              "uuid": "40a03121-5cbf-476c-8e35-0be17eee1d19",
+              "parentUUID": "ea70044d-b479-433a-8fc7-a13fffa4f6e1",
               "isHook": false,
               "skipped": false
             },
@@ -616,36 +616,31 @@
               "title": "Should uncheck an article from favorites",
               "fullTitle": "API Test Cases for user creation Should uncheck an article from favorites",
               "timedOut": null,
-              "duration": 5327,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 1684,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get(feed.articleFavorites).should('be.visible').and('contains.text', '1').click();\ncy.setArticleAsFavorite();\ncy.get(feed.articleFavorites).should('contains.text', '2').click();\ncy.fixture('articleList.json').then(function (file) {\n    var articleLink = file.articles[0].slug;\n    file.articles[0].favoritesCount = 1;\n    cy.intercept('DELETE', Cypress.env('apiUrl') + '/articles/' + articleLink + '/favorite', file);\n});\ncy.get(feed.articleFavorites).should('contains.text', '1');",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .article-preview > article-meta.ng-isolate-scope > .article-meta > :nth-child(3) > .pull-xs-right > .btn`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .article-preview > article-meta.ng-isolate-scope > .article-meta > :nth-child(3) > .pull-xs-right > .btn`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/feedTests.cy.ts:31:0)",
-                "diff": null
-              },
-              "uuid": "1b2289ef-64a9-4303-b108-b935ff261d2c",
-              "parentUUID": "ce3946ef-65ad-4ac6-a0e1-7ede1a232b07",
+              "err": {},
+              "uuid": "7399f89a-e8ea-494e-9c90-ea47a8ef0901",
+              "parentUUID": "ea70044d-b479-433a-8fc7-a13fffa4f6e1",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c078a4ca-6334-4737-bca3-3d78151786f3",
-            "5622ea79-6078-401a-b7e7-edbf110db18f"
+            "ab79f00e-372c-47c4-8e7f-c3ff71ac0f7a",
+            "40a03121-5cbf-476c-8e35-0be17eee1d19",
+            "7399f89a-e8ea-494e-9c90-ea47a8ef0901"
           ],
-          "failures": [
-            "1b2289ef-64a9-4303-b108-b935ff261d2c"
-          ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11242,
+          "duration": 8562,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

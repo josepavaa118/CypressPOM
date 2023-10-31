@@ -1,5 +1,5 @@
-import * as appSignIn from "../selectors/signInPage.sel"
-import * as appHome from "../selectors/homePage.sel"
+import * as appSignIn from "../../selectors/signInPage.sel"
+import * as appHome from "../../selectors/homePage.sel"
 
 describe('Home Page Test Cases', () => {
   let uiTexts: any

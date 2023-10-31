@@ -4,13 +4,9 @@ declare namespace Cypress{
          * @description This cmd allows user logins directly from API, returns a set localstorage cookie in test browser
          * @example cy.userLogin()
          */
-        userLogin():Chainable<Element>
+        userLogin():chainable<Element>
         
-        /**
-         * @description This cmd deletes the UI-created article from API
-         * @example cy.deleteCreatedArticle()
-         */
-         deleteCreatedArticle():Chainable<Element>
+
 
         /**
          * @description This cmd mocks the GET /tags response from API to a specific set/amount of tags
@@ -32,7 +28,7 @@ declare namespace Cypress{
 
          /**
          * @description Simply used to visit the home page
-         * @example cy.openHomePag()
+         * @example cy.openHomePage()
          */
          openHomePage():Chainable<Element>
     }

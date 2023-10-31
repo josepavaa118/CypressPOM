@@ -1,5 +1,5 @@
-import * as feed from "../selectors/feedPage.sel"
-import * as article from "../selectors/articlePage.sel"
+import * as feed from "../../selectors/feedPage.sel"
+import * as article from "../../selectors/articlePage.sel"
 
 describe('template spec', () => {
     let userData:any

@@ -1,5 +1,5 @@
- import * as login from "../selectors/loginPage.sel"
- import * as feed from "../selectors/feedPage.sel"
+ import * as login from "../../selectors/loginPage.sel"
+ import * as feed from "../../selectors/feedPage.sel"
 
 describe('Login Tests using UI', () => {//The fixture files loaded here are for user credentials and UI Labels
     let userData:any

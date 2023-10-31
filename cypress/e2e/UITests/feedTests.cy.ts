@@ -1,5 +1,5 @@
-import * as feed from "../selectors/feedPage.sel"
-import * as appHome from "../selectors/homePage.sel"
+import * as feed from "../../selectors/feedPage.sel"
+import * as appHome from "../../selectors/homePage.sel"
 describe("API Test Cases for user creation", () => {
     const apiUrl = Cypress.env('apiUrl')
     let userData:any

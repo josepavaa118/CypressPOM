@@ -1,4 +1,4 @@
-Cypress.Commands.add("deleteCreatedArticle", () => { 
+Cypress.Commands.add("deleteCreatedArticle",function () { 
     cy.request({ 
       method:"DELETE",
       url: Cypress.env('apiUrl')+'/articles/'+Cypress.env('ArticleSlug'),

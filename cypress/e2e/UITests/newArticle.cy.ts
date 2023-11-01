@@ -1,7 +1,7 @@
 import * as feed from "../../selectors/feedPage.sel"
 import * as article from "../../selectors/articlePage.sel"
 
-describe('template spec', () => {
+describe('Spec for new articles testing', () => {
     let userData:any
     let uiTexts: any
     let articleData:any

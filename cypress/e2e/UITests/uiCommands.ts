@@ -1,4 +1,4 @@
-Cypress.Commands.add("setArticleAsFavorite", () => { 
+Cypress.Commands.add("setArticleAsFavorite",() => { 
     cy.fixture('articleList.json').then(file=>{
       const articleLink=file.articles[0].slug
       file.articles[0].favoritesCount=2 

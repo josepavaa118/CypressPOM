@@ -1,4 +1,4 @@
-import * as tags from "../selectors/tagList.sel"
+import * as tags from "../../selectors/tagList.sel"
 describe('Tag list Testing', () => {
     let tagList: any
     before(() => {
